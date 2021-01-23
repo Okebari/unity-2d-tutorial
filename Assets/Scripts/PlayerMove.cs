@@ -90,6 +90,7 @@ public class PlayerMove : MonoBehaviour
         float h = Input.GetAxisRaw("Horizontal");
         rigid.AddForce(Vector2.right * h, ForceMode2D.Impulse);
 
+        // 캐릭터 좌우 설정
         if(rigid.velocity.x > maxSpeed){
             rigid.velocity = new Vector2(maxSpeed, rigid.velocity.y);
         }else if(rigid.velocity.x < maxSpeed*(-1)){ 
